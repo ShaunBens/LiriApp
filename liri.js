@@ -128,11 +128,11 @@ inquirer.prompt([{
             //set up Spotify search for Track based on "song" input by user
 
 
-        ]).then(function(response) {
+        ]).then(function(name) {
 
             spotify.search({
                 type: 'track',
-                query: response,
+                query: name.song,
                 limit: 1
             }, function(err, data) {
                 if (err) {
