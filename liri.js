@@ -208,20 +208,20 @@ inquirer.prompt([{
     }
     else if (user.commands === "do-what-it-says") {
         // This block of code will read from the "random.txt" file.
-        // It's important to include the "utf8" parameter or the code will provide stream data (garbage)
         // The code will store the contents of the reading inside the variable "data"
         fs.readFile("random.txt", "utf8", function(error, data) {
             if (error) {
                 console.log(error);
             }
             else {
-                //  var dataArr = data.split(",");
+                var dataArr = data.split(",");
+                var thing = dataArr[1];
 
-                //  console.log(dataArr);
+                console.log(thing);
 
                 spotify.search({
                     type: 'track',
-                    query: data,
+                    query: thing,
                     limit: 1
                 }, function(err, data) {
                     if (err) {
