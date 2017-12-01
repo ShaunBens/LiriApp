@@ -111,7 +111,6 @@ inquirer.prompt([{
 
         //=======================================Spotify===============================================
 
-        //I cant get my spotify to grab my search with inquirer. Everything looks to be set up correctly :(
 
     }
     else if (user.commands === "spotify-this-song") {
